@@ -1,0 +1,45 @@
+{
+  "name": "dsh-plugin-usage-dashboard",
+  "version": "0.1.0",
+  "description": "DeepSeek usage & cost dashboard for the DeepSeek Harness bottom status bar: token/cost aggregation per session, budget alert, and a balance guard.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-cordis-client-runner",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ],
+      "platform": "web"
+    }
+  },
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "deepseek",
+    "usage",
+    "cost",
+    "dashboard",
+    "plugin"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-client-runtime": "^0.1.0-rc.6",
+    "@deepseek-ai/dsh-client-locale": "^0.1.0-rc.6",
+    "@deepseek-ai/dsh-cordis-client-runner": "^0.1.0-rc.6",
+    "@deepseek-ai/dsh-client-ui-conversation": "^0.1.0-rc.6",
+    "react": "^18.2.0"
+  }
+}
